@@ -17,14 +17,8 @@
 		  <li class="nav-item">
 		    <a class="nav-link active" href="https://leandro-gomez.github.io/">Welcome</a>
 		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="https://github.com/leandro-gomez/" target="_blank">Github</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="https://www.linkedin.com/in/leandrogzvz/" target="_blank">Linkedin</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link disabled" href="#">Twitter</a>
+		  <li class="nav-item" v-for="navlink in navlinks">
+		    <a class="nav-link" v-bind:href="navlink.href" target="_blank">{{ navlink.text }}</a>
 		  </li>
 		</ul>
 		<h1 class="text-center">{{ title }}</h1>
@@ -38,7 +32,11 @@
 	    var app = new Vue({
 	      el: '#app',
 	      data: {
-	        title: "Leandro Gomez"
+	        title: "Leandro Gomez",
+	        navlinks: [
+	        	{"href": "https://github.com/leandro-gomez/", "text": "Github"},
+	        	{"href": "https://www.linkedin.com/in/leandrogzvz/", "text": "Linkedin"},
+	        ]
 	      }
 	    })
 	  </script>
