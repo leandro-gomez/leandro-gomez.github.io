@@ -1,1 +1,22 @@
-Hello Wolrld
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Leandro Gomez</title>
+  	<!-- production version, optimized for size and speed -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ title }}</h1>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        title: "Leandro Gomez"
+      }
+    })
+  </script>
+</body>
+</html>
