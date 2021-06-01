@@ -1,22 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-  	<title>Leandro Gomez</title>
-  	<!-- production version, optimized for size and speed -->
-	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-</head>
-<body>
-  <div id="app">
-    <h1>{{ title }}</h1>
-  </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        title: "Leandro Gomez"
-      }
-    })
-  </script>
-</body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Leandro Gomez</title>
+
+  </head>
+  <body>
+	<div class="container" id="app">
+	  <h1 class="text-center">{{ title }}</h1>
+	</div>
+
+
+    <!-- production version, optimized for size and speed -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	  <script>
+	    var app = new Vue({
+	      el: '#app',
+	      data: {
+	        title: "Leandro Gomez"
+	      }
+	    })
+	  </script>
+
+  </body>
 </html>
