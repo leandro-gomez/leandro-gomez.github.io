@@ -23,14 +23,48 @@
 				    <h5 class="card-title">Leandro Gomez</h5>
 				    <h6 class="card-subtitle mb-2 text-muted">Full Stack Developer</h6>
 				    <h6 class="card-subtitle mb-2 text-muted">Guayaquil, Ecuador</h6>
-				    <a href="#contact-form" @click="focusElement($event, 'fullNameInput')" class="btn btn-info">Contact me</a>
+				    <a href="#contact-form" @click="focusElement($event, 'fullNameInput')" class="btn btn-outline-info">Contact</a>
 				  </div>
 				</div>
 			</div>
 			<div class="col-8">
+				<span class="text-center">
+					<h1>Leandro Gomez</h1>
+					<h3 class="text-muted">Full Stack Sofware Developer</h3>
+				</span>
+				<p>
+					Hello there, I'm a software developer at <a target="__blank" href="https://devartis.com/">devartis SA</a>, but ready to start any project.
+					I have several years of experience in Backend development with <a href="https://www.djangoproject.com/" target="__blank">Django</a>, <a href="https://www.ansible.com/" target="__blank">Ansible</a> and <a href="https://www.docker.com/" target="__blank">Docker</a>.
+					Whenever I can, I like learning some cloud techologies like <a href="https://kubernetes.io/" target="__blank">Kubernetes</a> and <a href="https://aws.amazon.com/" target="__blank">AWS</a>.
+				</p>
+				<p>
+					In my free time I like playing the guitar and travelling.
+					My perfect place in the world is with my wife, my guitar and some Fernet on the beach.
+				</p>
+				<p>
+					Don't hesitate to reach me out if you have any ideas We can work together.
+				</p>
+			</div>
+		</div>
+		<div class="dropdown-divider"></div>
+		<div class="row mt-4">
+			<div class="col-6">
 				<table class="table table-hover">
 				  <tbody>
-				    <tr v-for="info in personalInformation" :key="info.title">
+				    <tr v-for="info in personalInformation.slice(0, personalInformation.length / 2)" :key="personalInformation.indexOf(info)">
+				      <td :style="info.style" class="text-center" scope="row"><i v-if="info.icon" :class="info.icon"></i>{{info.title}}</td>
+				      <td class="align-middle">
+				      	<a v-if="info.href" :href="info.href" target="__blank">{{info.text}}</a>
+				      	<span v-if="!info.href">{{info.text}}</span>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+			<div class="col-6">
+				<table class="table table-hover">
+				  <tbody>
+				    <tr v-for="info in personalInformation.slice(personalInformation.length / 2)" :key="personalInformation.indexOf(info)">
 				      <td :style="info.style" class="text-center" scope="row"><i v-if="info.icon" :class="info.icon"></i>{{info.title}}</td>
 				      <td class="align-middle">
 				      	<a v-if="info.href" :href="info.href" target="__blank">{{info.text}}</a>
