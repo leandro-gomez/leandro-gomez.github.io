@@ -6,22 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Leandro Gomez</title>
 
   </head>
   <body>
 	<div class="container" id="app">
-		<ul class="nav">
-		  <li class="nav-item">
-		    <a class="nav-link active" href="https://leandro-gomez.github.io/">Welcome</a>
-		  </li>
-		  <li class="nav-item" v-for="navlink in navlinks">
-		    <a class="nav-link" v-bind:href="navlink.href" target="_blank">{{ navlink.text }}</a>
-		  </li>
-		</ul>
-		<h1 class="text-center">{{ title }}</h1>
+
+		<div class="row mt-4">
+			<div class="col-4">
+				<div class="card text-center">
+				  <img class="card-img-top rounded-circle img-thumbnail" width="150" src="./src/img/profile.jpg" alt="Leandro Gomez">
+				  <div class="card-body">
+				    <h5 class="card-title">Leandro Gomez</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Full Stack Developer</h6>
+				    <h6 class="card-subtitle mb-2 text-muted">Guayaquil, Ecuador</h6>
+				    <a href="#" class="btn btn-primary">Contact!</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-8">
+				<table class="table table-hover">
+				  <tbody>
+				    <tr v-for="info in personalInformation" :key="info.title">
+				      <td :style="info.style" class="text-center" scope="row"><i v-if="info.icon" :class="info.icon"></i>{{info.title}}</td>
+				      <td class="align-middle">
+				      	<a v-if="info.href" :href="info.href" target="__blank">{{info.text}}</a>
+				      	<span v-if="!info.href">{{info.text}}</span>
+				      </td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+
+			<div class="col-4" v-for="skillGroup in skillGroups">
+				<h5 class="text-center">{{ skillGroup.title }}</h5>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item" v-for="skill in skillGroup.skills">
+				  	{{skill.title}}
+				  	<div class="progress">
+						  <div :class="['progress-bar', 'progress-bar-striped', 'progress-bar-animated', skillGroup.progressClass]" role="progressbar" :style="{ width: skill.value + '%' }" :aria-valuenow="skill.value" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+				  </li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
 
