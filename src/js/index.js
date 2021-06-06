@@ -3,6 +3,12 @@ var LGProfile = {
     toogleSkillGroupsDesctions() {
       this.showSkillGroupsDescriptions = !this.showSkillGroupsDescriptions;
     },
+    focusElement($event, elemRef) {
+      const element = this.$refs[elemRef];
+      setTimeout(function() {
+        element.focus();
+      }, 500);
+    }
   },
   data() {
     return {
