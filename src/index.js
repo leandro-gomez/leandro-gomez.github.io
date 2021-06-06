@@ -1,4 +1,4 @@
-var app = new Vue({
+var app = Vue({
   el: '#app',
   data: {
     title: "Leandro Gomez",
@@ -8,3 +8,8 @@ var app = new Vue({
     ]
   }
 });
+
+const LGProfile = {
+
+}
+
