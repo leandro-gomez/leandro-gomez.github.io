@@ -9,6 +9,8 @@
     </div>
     <div class="dropdown-divider"></div>
     <Skills/>
+    <div class="dropdown-divider"></div>
+    <ContactForm/>
   </div>
 </template>
 
@@ -17,6 +19,7 @@ import ProfileCard from '@/components/ProfileCard.vue'
 import PresentationCard from '@/components/PresentationCard.vue'
 import PersonalInformation from '@/components/PersonalInformation.vue'
 import Skills from '@/components/Skills.vue'
+import ContactForm from '@/components/ContactForm.vue'
 
 export default {
   name: 'Home',
@@ -24,7 +27,8 @@ export default {
     ProfileCard,
     PresentationCard,
     PersonalInformation,
-    Skills
+    Skills,
+    ContactForm
   }
 }
 </script>
