@@ -6,7 +6,7 @@
         <h5 class="card-title">Leandro Gomez</h5>
         <h6 class="card-subtitle mb-2 text-muted">Full Stack Developer</h6>
         <h6 class="card-subtitle mb-2 text-muted">Guayaquil, Ecuador</h6>
-        <a href="#contact-form" @click="focusElement($event, 'fullNameInput')" class="btn btn-outline-info">Contact</a>
+        <a href="#contact-form" @click.prevent="focusElement('contact-form')" class="btn btn-outline-info">Contact</a>
       </div>
     </div>
   </div>
@@ -14,6 +14,12 @@
 
 <script>
 export default {
-  name: 'ProfileCard'
+  name: 'ProfileCard',
+  methods: {
+    focusElement (elemRef) {
+      var element = document.getElementById(elemRef)
+      window.scrollTo(0, element.offsetTop)
+    }
+  }
 }
 </script>
