@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'Skills',
+  name: 'SkillList',
   props: ['skills', 'title', 'progressClass']
 }
 </script>
