@@ -7,6 +7,7 @@
     <div class="row mt-4">
       <PersonalInformation/>
     </div>
+    <div class="dropdown-divider"></div>
   </div>
 </template>
 
