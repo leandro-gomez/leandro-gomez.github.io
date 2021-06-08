@@ -31,7 +31,7 @@
         </span>
       </transition>
       <transition name="fade">
-        <button v-show="showSkillGroupsDescriptions" type="button" class="btn btn-link" @click="toogleSkillGroupsDesctions">Show less</button>
+        <button v-show="showSkillGroupsDescriptions" type="button" class="btn btn-link text-info" @click="toogleSkillGroupsDesctions">Show less</button>
       </transition>
     </div>
   </div>
