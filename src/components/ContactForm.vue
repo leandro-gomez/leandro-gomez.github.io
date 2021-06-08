@@ -3,7 +3,7 @@
       <div class="col-8 offset-2" id="contact-form">
         <span class="text-center">
         <h2 class="text-center">Contact me!</h2>
-        <form action="https://formspree.io/f/xzbyrlrg" method="POST" ref="contactForm">
+        <form action="https://formspree.io/f/xzbyrlrg" method="POST" id="contact-form">
           <div class="form-group">
             <label for="full_name">Your name</label>
             <input placeholder="Jonh Smith" type="text" class="form-control" name="fullName">
