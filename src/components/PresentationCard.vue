@@ -1,5 +1,5 @@
 <template>
-  <div class="col-8">
+  <div class="col-sm-8">
     <span class="text-center">
       <h1>Leandro Gomez</h1>
       <h3 class="text-muted">Full Stack Sofware Developer</h3>

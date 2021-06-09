@@ -3,7 +3,7 @@
     <SkillList :skills="mainSkills" title="Work Experience" progress-class="bg-success"/>
     <SkillList :skills="secondSkills" title="Other work Experience" progress-class="bg-info"/>
     <SkillList :skills="someKnowledge" title="Some knowledge" progress-class="bg-warning"/>
-    <div class="col text-center">
+    <div class="col-md text-center">
       <button v-show="!showSkillGroupsDescriptions" type="button" class="btn btn-link text-info" @click="toogleSkillGroupsDesctions">Read more...</button>
       <button v-show="showSkillGroupsDescriptions" type="button" class="btn btn-link text-info" @click="toogleSkillGroupsDesctions">Read less...</button>
       <transition name="fade">

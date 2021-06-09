@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4">
+  <div class="col-md-4 mt-2">
     <h5 class="text-center">{{ title }}</h5>
     <ul class="list-group list-group-flush">
       <li class="list-group-item" v-for="skill in skills" :key="skills.indexOf(skill)">

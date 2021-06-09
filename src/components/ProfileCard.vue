@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4">
+  <div class="col-sm-4">
     <div class="card text-center">
       <img class="card-img-top rounded-circle img-thumbnail" width="150" src="../assets/profile.jpg" alt="Leandro Gomez">
       <div class="card-body">

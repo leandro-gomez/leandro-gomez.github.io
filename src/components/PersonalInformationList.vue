@@ -1,5 +1,5 @@
 <template>
-  <div class="col-6">
+  <div class="col-md-6">
     <table class="table table-hover">
       <tbody>
         <tr v-for="info in personalInformation" :key="personalInformation.indexOf(info)">
