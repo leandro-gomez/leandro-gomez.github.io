@@ -6,7 +6,10 @@
         <h5 class="card-title">Leandro Gomez</h5>
         <h6 class="card-subtitle mb-2 text-muted">Full Stack Developer</h6>
         <h6 class="card-subtitle mb-2 text-muted">Guayaquil, Ecuador</h6>
-        <a href="#contact-form" @click.prevent="focusElement('contact-form')" class="btn btn-outline-info">Contact</a>
+        <div class="btn-group-vertical">
+          <a href="#contact-form" @click.prevent="focusElement('contact-form')" class="btn btn-outline-info">Contact <i class="far fa-paper-plane"></i></a>
+          <a href="/#/gists" class="btn btn-outline-info">Gists <i class="fab fa-github"></i></a>
+        </div>
       </div>
     </div>
   </div>
