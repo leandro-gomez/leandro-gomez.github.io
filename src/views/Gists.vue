@@ -40,9 +40,9 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github.css'
+import { githubClient } from '@/libs/httpclient.js'
 
 export default {
   name: 'Gists',
@@ -64,12 +64,7 @@ export default {
       return hljs.highlightAuto(content).value
     },
     fetchGists () {
-      const config = {
-        headers: {
-          Accept: 'application/vnd.github.v3+json'
-        }
-      }
-      const promises = this.gistIds.map(gistId => axios.get(`${this.baseUrl}${gistId}`, config))
+      const promises = this.gistIds.map(gistId => githubClient.getGist(gistId))
       Promise.all(promises).then(results => {
         this.gists = results.map(result => {
           return result.data
