@@ -24,18 +24,12 @@ const routes = [
   {
     path: '/gists',
     name: 'Gists',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Gists.vue')
+    component: () => import(/* webpackChunkName: "gists" */ '../views/Gists.vue')
   },
   {
     path: '/repos',
     name: 'GithubRepositories',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/GithubRepositories.vue')
+    component: () => import(/* webpackChunkName: "repost" */ '../views/GithubRepositories.vue')
   }
 ]
 
