@@ -29,7 +29,7 @@ const routes = [
   {
     path: '/repos',
     name: 'GithubRepositories',
-    component: () => import(/* webpackChunkName: "repost" */ '../views/GithubRepositories.vue')
+    component: () => import(/* webpackChunkName: "repos" */ '../views/GithubRepositories.vue')
   }
 ]
 
