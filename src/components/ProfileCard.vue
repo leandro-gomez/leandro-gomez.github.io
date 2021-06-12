@@ -9,6 +9,7 @@
         <div class="btn-group-vertical">
           <a href="#contact-form" @click.prevent="focusElement('contact-form')" class="btn btn-outline-info">Contact <i class="far fa-paper-plane"></i></a>
           <a href="/#/gists" class="btn btn-outline-info">Gists <i class="fab fa-github"></i></a>
+          <a href="/#/repos" class="btn btn-outline-info">Repositories <i class="fab fa-github"></i></a>
         </div>
       </div>
     </div>
