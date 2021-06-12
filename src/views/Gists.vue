@@ -3,6 +3,9 @@
     <div class="row mt-4">
       <div class="col">
         <h1 class="text-center">My personal gists</h1>
+        <div v-if="showError" class="alert alert-danger" role="alert">
+          Somethig went wrong, please try later
+        </div>
         <transition name="fade">
           <span class="mt-4 mb-4" v-if="loading">
             <h2 class="text-center text-muted">Loading...</h2>
@@ -49,7 +52,8 @@ export default {
       gistIds: ['0d1f5eea30fada61492863dfdc2a746f', 'fb3cab86ff181e4e5b3a4aeb03c80830'],
       baseUrl: 'https://api.github.com/gists/',
       gists: [],
-      progress: 42 // :)
+      progress: 42, // :)
+      showError: false
     }
   },
   mounted () {
@@ -71,6 +75,9 @@ export default {
           return result.data
         })
         this.loading = false
+      }).catch(_ => {
+        this.loading = false
+        this.showError = true
       })
     }
   }
