@@ -4,7 +4,7 @@
       <div class="col">
         <h1 class="text-center">My personal gists</h1>
         <div v-if="showError" class="alert alert-danger" role="alert">
-          Somethig went wrong, please try later
+          Something went wrong, please try later
         </div>
         <transition name="fade">
           <span class="mt-4 mb-4" v-if="loading">
