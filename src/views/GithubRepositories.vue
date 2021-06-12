@@ -13,7 +13,7 @@
         </transition>
         <span>
           <div v-for="repo in repos" :key="repos.indexOf(repo)">
-            <div class="card">
+            <div class="card mt-4">
               <div class="card-header">
                 <a :href="repo.html_url"><i class="fas fa-code"></i> {{repo.full_name}}</a>
               </div>
@@ -23,6 +23,7 @@
                   <li >Starts: <span class="badge badge-success"> <i class="far fa-star"></i> {{repo.stargazers_count}}</span></li>
                   <li >Watchers: <span class="badge badge-success"> <i class="fas fa-binoculars"></i> {{repo.watchers_count}}</span></li>
                   <li >Issues: <span class="badge badge-success"> <i class="fas fa-tasks"></i> {{repo.open_issues}}</span></li>
+                  <li>Languages: <span :key="language" v-for="value,language in repo.languages" class="badge badge-info ml-1"> {{language}} </span></li>
                 </ul>
                   <p>{{repo.description}}</p>
               </div>
@@ -41,10 +42,10 @@ export default {
   data () {
     return {
       loading: true,
-      reposIds: ['django-base'],
+      reposIds: ['django-base', 'leandro-gomez.github.io'],
       baseUrl: 'https://api.github.com/repos/leandro-gomez/',
       repos: [],
-      progress: 42 // :)
+      progress: 10
     }
   },
   mounted () {
@@ -62,8 +63,24 @@ export default {
         this.repos = results.map(result => {
           return result.data
         })
-        this.loading = false
+        this.progress = 55
+        this.fetchLanguages(this.repos).then(_ => {
+          this.progress = 100
+          setTimeout(_ => { this.loading = false }, 1000)
+        })
       })
+    },
+    async fetchLanguages (repos) {
+      const config = {
+        headers: {
+          Accept: 'application/vnd.github.v3+json'
+        }
+      }
+      for (var i = repos.length - 1; i >= 0; i--) {
+        var repo = repos[i]
+        var response = await axios.get(`${this.baseUrl}${repo.name}/languages`, config)
+        repo.languages = response.data
+      }
     }
   }
 }
