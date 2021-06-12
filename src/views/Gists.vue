@@ -50,7 +50,6 @@ export default {
     return {
       loading: true,
       gistIds: ['0d1f5eea30fada61492863dfdc2a746f', 'fb3cab86ff181e4e5b3a4aeb03c80830'],
-      baseUrl: 'https://api.github.com/gists/',
       gists: [],
       progress: 42, // :)
       showError: false

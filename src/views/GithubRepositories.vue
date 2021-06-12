@@ -38,7 +38,7 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
+import { githubClient } from '@/libs/httpclient.js'
 
 export default {
   name: 'GithubRepositories',
@@ -46,7 +46,6 @@ export default {
     return {
       loading: true,
       reposIds: ['django-base', 'leandro-gomez.github.io'],
-      baseUrl: 'https://api.github.com/repos/leandro-gomez/',
       repos: [],
       progress: 10,
       showError: false
@@ -57,12 +56,7 @@ export default {
   },
   methods: {
     fetchRepos () {
-      const config = {
-        headers: {
-          Accept: 'application/vnd.github.v3+json'
-        }
-      }
-      const promises = this.reposIds.map(repoID => axios.get(`${this.baseUrl}${repoID}`, config))
+      const promises = this.reposIds.map(repoID => githubClient.getRepo(`leandro-gomez/${repoID}`))
       Promise.all(promises).then(results => {
         this.repos = results.map(result => {
           return result.data
@@ -78,14 +72,9 @@ export default {
       })
     },
     async fetchLanguages (repos) {
-      const config = {
-        headers: {
-          Accept: 'application/vnd.github.v3+json'
-        }
-      }
       for (var i = repos.length - 1; i >= 0; i--) {
         var repo = repos[i]
-        var response = await axios.get(`${this.baseUrl}${repo.name}/languages`, config)
+        var response = await githubClient.getLanguages(`leandro-gomez/${repo.name}`)
         repo.languages = response.data
       }
     }
