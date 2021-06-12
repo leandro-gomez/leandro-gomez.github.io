@@ -3,6 +3,9 @@
     <div class="row mt-4">
       <div class="col">
         <h1 class="text-center">My personal repositories</h1>
+        <div v-if="showError" class="alert alert-danger" role="alert">
+          Somethig went wrong, please try later
+        </div>
         <transition name="fade">
           <span class="mt-4 mb-4" v-if="loading">
             <h2 class="text-center text-muted">Loading...</h2>
@@ -45,7 +48,8 @@ export default {
       reposIds: ['django-base', 'leandro-gomez.github.io'],
       baseUrl: 'https://api.github.com/repos/leandro-gomez/',
       repos: [],
-      progress: 10
+      progress: 10,
+      showError: false
     }
   },
   mounted () {
@@ -68,6 +72,9 @@ export default {
           this.progress = 100
           setTimeout(_ => { this.loading = false }, 1000)
         })
+      }).catch(_ => {
+        this.loading = false
+        this.showError = true
       })
     },
     async fetchLanguages (repos) {
