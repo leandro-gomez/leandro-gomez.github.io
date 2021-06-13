@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row mt-4">
       <div class="col">
-        <h1 class="text-center">My favories books</h1>
+        <h1 class="text-center">My favouries books</h1>
       </div>
     </div>
     <div class="row mt-4" v-for="group in groupedBooks" :key="groupedBooks.indexOf(group)">
