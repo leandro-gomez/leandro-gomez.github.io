@@ -65,24 +65,22 @@ export default {
     }
   },
   mounted () {
-    this.fetchRepos()
+    this.fetchRepos().then(_ => {
+      this.progress = 100
+      this.loading = false
+    }).catch(_ => {
+      this.loading = false
+      this.showError = true
+    })
   },
   methods: {
-    fetchRepos () {
+    async fetchRepos () {
       const promises = this.reposIds.map(repoID => githubClient.getRepo(`leandro-gomez/${repoID}`))
-      Promise.all(promises).then(results => {
-        this.repos = results.map(result => {
-          return result.data
-        })
-        this.progress = 40
-        this.fetchLanguages(this.repos).then(_ => {
-          this.progress = 70
-          this.loading = false
-        })
-      }).catch(_ => {
-        this.loading = false
-        this.showError = true
-      })
+      const results = await Promise.all(promises)
+      this.repos = results.map(result => result.data)
+      this.progress = 40
+      await this.fetchLanguages(this.repos)
+      this.progress = 70
     },
     async fetchLanguages (repos) {
       for (var i = repos.length - 1; i >= 0; i--) {
