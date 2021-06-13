@@ -30,6 +30,11 @@ const routes = [
     path: '/repos',
     name: 'GithubRepositories',
     component: () => import(/* webpackChunkName: "repos" */ '../views/GithubRepositories.vue')
+  },
+  {
+    path: '/books',
+    name: 'FavBooks',
+    component: () => import(/* webpackChunkName: "books" */ '../views/FavBooks.vue')
   }
 ]
 
