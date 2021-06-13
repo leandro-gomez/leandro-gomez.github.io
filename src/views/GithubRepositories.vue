@@ -28,8 +28,20 @@
                   <li >Issues: <span class="badge badge-success"> <i class="fas fa-tasks"></i> {{repo.open_issues}}</span></li>
                   <li>Languages: <span :key="language" v-for="value,language in repo.languages" class="badge badge-info ml-1"> {{language}} </span></li>
                 </ul>
-                  <p>{{repo.description}}</p>
+                <p>{{repo.description}}</p>
+                <div class="btn-group" role="group" aria-label="Actions">
+                    <button v-if="!repo.htmlReadme" @click="showReadme(repo)" class="btn btn-info">Show README <i class="fab fa-github"></i></button>
+                    <button v-if="repo.htmlReadme" @click="removeReadme(repo)" class="btn btn-info">Hide README <i class="fab fa-github"></i></button>
+                  </div>
               </div>
+              <transition name="fade">
+                <span v-if="repo.htmlReadme">
+                  <div class="dropdown-divider"></div>
+                  <div class="card-body">
+                    <div v-html="repo.htmlReadme"></div>
+                  </div>
+                </span>
+            </transition>
             </div>
           </div>
         </span>
@@ -38,6 +50,7 @@
   </div>
 </template>
 <script>
+import { Converter } from 'showdown'
 import { githubClient } from '@/libs/httpclient.js'
 
 export default {
@@ -61,10 +74,10 @@ export default {
         this.repos = results.map(result => {
           return result.data
         })
-        this.progress = 55
+        this.progress = 40
         this.fetchLanguages(this.repos).then(_ => {
-          this.progress = 100
-          setTimeout(_ => { this.loading = false }, 1000)
+          this.progress = 70
+          this.loading = false
         })
       }).catch(_ => {
         this.loading = false
@@ -77,6 +90,18 @@ export default {
         var response = await githubClient.getLanguages(`leandro-gomez/${repo.name}`)
         repo.languages = response.data
       }
+    },
+    showReadme (repo) {
+      githubClient.getHtmlReadme(`leandro-gomez/${repo.name}`).then(response => {
+        repo.htmlReadme = this.parseMarkdown(response.data)
+      })
+    },
+    removeReadme (repo) {
+      repo.htmlReadme = null
+    },
+    parseMarkdown (htmlMarkdown) {
+      var converter = new Converter()
+      return converter.makeHtml(htmlMarkdown)
     }
   }
 }

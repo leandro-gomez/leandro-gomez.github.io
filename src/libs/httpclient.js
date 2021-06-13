@@ -25,6 +25,12 @@ class GithubClient extends AxiosHttpClient {
     return this.get(`${this.baseUrl}repos/${repoFullName}/languages`, this.getDefaultConfig())
   }
 
+  getHtmlReadme (repoFullName) {
+    const config = this.getDefaultConfig()
+    config.headers.Accept = 'application/vnd.github.v3.raw+json'
+    return this.get(`${this.baseUrl}repos/${repoFullName}/readme`, config)
+  }
+
   getDefaultConfig () {
     return {
       headers: {
