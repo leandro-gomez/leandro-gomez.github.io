@@ -44,6 +44,12 @@ export default {
           image_url: 'https://m.media-amazon.com/images/I/419aaEMtQlS.jpg',
           description: 'THE book for getting starting with k8s',
           url: 'https://www.amazon.com/Kubernetes-Book-Version-November-2018-ebook/dp/B072TS9ZQZ'
+        },
+        {
+          title: 'Computer Networks',
+          image_url: 'https://images-na.ssl-images-amazon.com/images/I/41bdzcfQKbL._SX384_BO1,204,203,200_.jpg',
+          description: 'I leant networking with this book',
+          url: 'https://www.amazon.com/Computer-Networks-5th-Andrew-Tanenbaum/dp/0132126958'
         }
       ]
     }
