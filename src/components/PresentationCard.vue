@@ -19,6 +19,11 @@
         Don't hesitate to reach me out if you have any ideas We can work together.
       </p>
     </span>
+    <div class="btn-group mt-1">
+      <a href="/#/gists" class="btn btn-outline-info">Gists <i class="fab fa-github"></i></a>
+      <a href="/#/repos" class="btn btn-outline-info">Repositories <i class="fab fa-github"></i></a>
+      <a href="/#/books" class="btn btn-outline-info">Fav. Books <i class="fas fa-journal-whills"></i></a>
+    </div>
   </div>
 </template>
 
