@@ -30,6 +30,7 @@
                 </ul>
                 <p>{{repo.description}}</p>
                 <div class="btn-group" role="group" aria-label="Actions">
+                    <a :href="repo.html_url" target="__blank" class="btn btn-info">Go to Repo <i class="fab fa-github"></i></a>
                     <button v-if="!repo.htmlReadme" @click="showReadme(repo)" class="btn btn-info">Show README <i class="fab fa-github"></i></button>
                     <button v-if="repo.htmlReadme" @click="removeReadme(repo)" class="btn btn-info">Hide README <i class="fab fa-github"></i></button>
                   </div>
