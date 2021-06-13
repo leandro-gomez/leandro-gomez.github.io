@@ -8,7 +8,10 @@
     <div class="row mt-4" v-for="group in groupedBooks" :key="groupedBooks.indexOf(group)">
       <div class="col-4" v-for="book in group" :key="group.indexOf(book)">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" :src="book.image_url" :alt="book.title">
+          <a :href="book.url" target="__blank">
+            <img class="card-img-top" :src="book.image_url" :alt="book.title">
+          </a>
+
           <div class="card-body">
             <h5 class="card-title">{{book.title}}</h5>
             <p class="card-text">{{book.description}}</p>
@@ -50,6 +53,18 @@ export default {
           image_url: 'https://images-na.ssl-images-amazon.com/images/I/41bdzcfQKbL._SX384_BO1,204,203,200_.jpg',
           description: 'I leant networking with this book',
           url: 'https://www.amazon.com/Computer-Networks-5th-Andrew-Tanenbaum/dp/0132126958'
+        },
+        {
+          title: 'C Programming Language',
+          image_url: 'https://images-na.ssl-images-amazon.com/images/I/411ejyE8obL._SX377_BO1,204,203,200_.jpg',
+          description: 'I don\'t remember much about C, but this book was cool to read',
+          url: 'https://www.amazon.com/-/es/dp/0131103628'
+        },
+        {
+          title: 'Construcción de software: Una mirada ágil',
+          image_url: 'https://m.media-amazon.com/images/I/41cTSFNSTkL.jpg',
+          description: 'This book helped me to approve Nicolás Paez\'s subject :)',
+          url: 'https://www.amazon.com/-/es/Nicolás-Paez-ebook/dp/B01M1L858Z'
         }
       ]
     }
