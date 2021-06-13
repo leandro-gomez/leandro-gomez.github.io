@@ -51,28 +51,30 @@ export default {
       loading: true,
       gistIds: ['0d1f5eea30fada61492863dfdc2a746f', 'fb3cab86ff181e4e5b3a4aeb03c80830'],
       gists: [],
-      progress: 42, // :)
+      progress: 0,
       showError: false
     }
   },
   mounted () {
-    this.fetchGists()
+    this.fetchGists().then(_ => {
+      this.progress = 100
+      setTimeout(_ => {
+        this.loading = false
+      }, 500)
+    }).catch(_ => {
+      this.loading = false
+      this.showError = true
+    })
   },
   methods: {
     highlightAuto (content) {
       return hljs.highlightAuto(content).value
     },
-    fetchGists () {
+    async fetchGists () {
+      this.progress = 10
       const promises = this.gistIds.map(gistId => githubClient.getGist(gistId))
-      Promise.all(promises).then(results => {
-        this.gists = results.map(result => {
-          return result.data
-        })
-        this.loading = false
-      }).catch(_ => {
-        this.loading = false
-        this.showError = true
-      })
+      const results = await Promise.all(promises)
+      this.gists = results.map(result => result.data)
     }
   }
 }
