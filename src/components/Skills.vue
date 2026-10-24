@@ -9,11 +9,11 @@
       <transition name="fade">
         <span v-show="showSkillGroupsDescriptions">
           <SkillListDescription title="Work Experience" >
-            More than 8 years of experience with Python, right now working as a Senior Developer. <br/>
-            Most applications developed with Django, while implementing RESTful APIs with Django Rest Framework and Asynchronous Queue Processing with Celery. <br/>
+            More than 10 years of experience with Python, right now working as a Technical Team Lead at Tiendanube, leading the design and development of high-performance, scalable applications. <br/>
+            Most applications developed with Django (RESTful APIs with Django Rest Framework) and Node.js/NestJS, guiding technical teams and making architecture decisions. <br/>
             PostgreSQL and MySQL are the usual choice for Backend databases along with Redis for caching and Celery broker. <br/>
             Deployments are automated to Linux machines using Redhat's Ansible automation.
-            Currently also I maintain and implement new infrastructure features using Amazon Web Services as hosting service
+            I also maintain and implement infrastructure features on Amazon Web Services, running workloads on Kubernetes (Amazon EKS)
           </SkillListDescription>
           <SkillListDescription title="Other Work Experience" >
             As part of my daily responsabilities, I promote the comunications between developers and operations teams.
@@ -24,7 +24,7 @@
             On daily basis, We use Docker containers for matching production external services (like databases and caching servers) or implementing specific apps within containers.
           </SkillListDescription>
           <SkillListDescription title="Some knowledge" >
-            Even I don't have working experience with the Kubernetes and Docker Swarm, I like to try them and be ready for any project that requires them. <br/>
+            I like to try new orchestration tools such as Docker Swarm and be ready for any project that requires them. <br/>
             Lastly, I have some working experience with Ruby and Chef. I've developed a Rails application with Spree framework some years ago and
             currently using Chef for specific apps deployments.
           </SkillListDescription>
@@ -55,14 +55,16 @@ export default {
     return {
       showSkillGroupsDescriptions: false,
       mainSkills: [
-        { title: 'Python', value: 100 },
-        { title: 'Ansible', value: 95 },
-        { title: 'Docker', value: 80 },
-        { title: 'Linux', value: 75 },
-        { title: 'Amazon Web Services', value: 75 }
+        { title: 'Python/Django', value: 100 },
+        { title: 'Node.js/NestJS', value: 80 },
+        { title: 'Team Leadership', value: 85 },
+        { title: 'Kubernetes/Amazon EKS', value: 70 },
+        { title: 'Docker', value: 80 }
       ],
       secondSkills: [
-        { title: 'DevOps', value: 80 },
+        { title: 'Ansible', value: 80 },
+        { title: 'Amazon Web Services', value: 75 },
+        { title: 'DevOps', value: 75 },
         { title: 'Gitlab-CI/Jenkins', value: 80 },
         { title: 'HTML/CSS', value: 75 },
         { title: 'VueJS', value: 75 },
@@ -70,7 +72,7 @@ export default {
       ],
       someKnowledge: [
         { title: 'Docker Swarm', value: 60 },
-        { title: 'Kubernetes', value: 60 },
+        { title: 'NetSuite', value: 50 },
         { title: 'Ruby', value: 40 },
         { title: 'Chef', value: 30 }
       ]

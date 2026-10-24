@@ -2,14 +2,14 @@
   <div class="col-sm-8">
     <span class="text-center">
       <h1>Leandro Gomez</h1>
-      <h3 class="text-muted">Full Stack Sofware Developer</h3>
+      <h3 class="text-muted">Technical Team Lead</h3>
     </span>
     <br/>
     <span style="font-size: 20px;">
       <p>
-        Hello there, I'm a software developer at <a class="text-info" target="__blank" href="https://devartis.com/">devartis SA</a>, but ready to start your project!
-        I have several years of experience in Backend development with <a class="text-info" href="https://www.djangoproject.com/" target="__blank">Django</a>, <a class="text-info" href="https://www.ansible.com/" target="__blank">Ansible</a> and <a class="text-info" href="https://www.docker.com/" target="__blank">Docker</a>.
-        Whenever I can, I like learning some cloud techologies like <a class="text-info" href="https://kubernetes.io/" target="__blank">Kubernetes</a> and <a class="text-info" href="https://aws.amazon.com/" target="__blank">AWS</a>.
+        Hello there, I'm a Technical Team Lead at <a class="text-info" target="__blank" href="https://www.tiendanube.com/">Tiendanube</a> with more than 10 years of experience building high-performance, scalable applications.
+        I combine solid Backend experience with <a class="text-info" href="https://www.djangoproject.com/" target="__blank">Python/Django</a> and <a class="text-info" href="https://nestjs.com/" target="__blank">Node.js/NestJS</a> with technical leadership: guiding teams and making architecture decisions.
+        Day to day I work with cloud technologies like <a class="text-info" href="https://kubernetes.io/" target="__blank">Kubernetes</a> and <a class="text-info" href="https://aws.amazon.com/eks/" target="__blank">Amazon EKS</a>.
       </p>
       <p>
         In my free time I like playing the guitar and travelling.
