@@ -4,7 +4,7 @@
       <img class="card-img-top rounded-circle img-thumbnail" width="150" src="../assets/profile.jpg" alt="Leandro Gomez">
       <div class="card-body">
         <h5 class="card-title">Leandro Gomez</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Full Stack Developer</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Technical Team Lead @ Tiendanube</h6>
         <h6 class="card-subtitle mb-2 text-muted">Guayaquil, Ecuador</h6>
         <div class="btn-group">
           <a href="#contact-form" @click.prevent="focusElement('contact-form')" class="btn btn-outline-info">Contact <i class="far fa-paper-plane"></i></a>
