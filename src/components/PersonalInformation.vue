@@ -22,7 +22,7 @@ export default {
       extraPersonalInfo: [
         { title: '', icon: 'fab fa-2x fa-github', style: {}, text: '@leandro-gomez', href: 'https://github.com/leandro-gomez' },
         { title: '', icon: 'fab fa-2x fa-linkedin', style: { color: '#0077B5' }, text: '@leandrogzvz', href: 'https://www.linkedin.com/in/leandrogzvz/' },
-        { title: '', icon: 'fas fa-2x fa-laptop-house', style: { color: '#771818' }, text: 'Technical Team Lead @ Tiendanube', href: 'https://www.tiendanube.com/' },
+        { title: '', icon: 'fas fa-2x fa-laptop-house', style: { color: '#771818' }, text: 'Staff Software Engineer @ Tiendanube', href: 'https://www.tiendanube.com/' },
         { title: '', icon: 'fab fa-2x fa-medium', style: {}, text: '@leandro_gomez', href: 'https://medium.com/@leandro_gomez' }
       ]
     }
