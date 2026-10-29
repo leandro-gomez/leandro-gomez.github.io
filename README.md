@@ -1,6 +1,6 @@
 # Leandro Gomez Page
 
-Leandro Gomez's page: [Link](https://leandro-gomez.github.io/)
+Leandro Gomez's page: [Link](https://leandro-gomez.ljgv.dev/#/)
 
 ## Project setup
 ```

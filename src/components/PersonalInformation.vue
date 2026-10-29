@@ -17,7 +17,7 @@ export default {
         { title: '', icon: 'far fa-2x fa-envelope', style: {}, text: 'leandro.gz73@gmail.com', href: 'mailto:leandro.gz73@gmail.com' },
         { title: '', icon: 'fas fa-2x fa-map-marked-alt', style: {}, text: 'Born in Argentina, currently in Ecuador', href: '' },
         { title: '', icon: 'fas fa-2x fa-university', style: {}, text: 'Universidad Nacional de Quilmes', href: 'http://www.unq.edu.ar/' },
-        { title: '', icon: 'fas fa-2x fa-globe', style: {}, text: 'https://leandro-gomez.github.io/', href: 'https://leandro-gomez.github.io/' }
+        { title: '', icon: 'fas fa-2x fa-globe', style: {}, text: 'https://leandro-gomez.ljgv.dev/#/', href: 'https://leandro-gomez.ljgv.dev/#/' }
       ],
       extraPersonalInfo: [
         { title: '', icon: 'fab fa-2x fa-github', style: {}, text: '@leandro-gomez', href: 'https://github.com/leandro-gomez' },
