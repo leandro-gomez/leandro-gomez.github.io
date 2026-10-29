@@ -2,14 +2,14 @@
   <div class="col-sm-8">
     <span class="text-center">
       <h1>Leandro Gomez</h1>
-      <h3 class="text-muted">Technical Team Lead</h3>
+      <h3 class="text-muted">Staff Software Engineer</h3>
     </span>
     <br/>
     <span style="font-size: 20px;">
       <p>
-        Hello there, I'm a Technical Team Lead at <a class="text-info" target="__blank" href="https://www.tiendanube.com/">Tiendanube</a> with more than 10 years of experience building high-performance, scalable applications.
-        I combine solid Backend experience with <a class="text-info" href="https://www.djangoproject.com/" target="__blank">Python/Django</a> and <a class="text-info" href="https://nestjs.com/" target="__blank">Node.js/NestJS</a> with technical leadership: guiding teams and making architecture decisions.
-        Day to day I work with cloud technologies like <a class="text-info" href="https://kubernetes.io/" target="__blank">Kubernetes</a> and <a class="text-info" href="https://aws.amazon.com/eks/" target="__blank">Amazon EKS</a>.
+        Hello there, I'm a Staff Software Engineer and technical leader at <a class="text-info" target="__blank" href="https://www.tiendanube.com/">Tiendanube</a> with more than 10 years of experience turning complex challenges into high-performance, scalable applications.
+        I combine solid <a class="text-info" href="https://www.djangoproject.com/" target="__blank">Python/Django</a> and <a class="text-info" href="https://nestjs.com/" target="__blank">Node.js/NestJS</a> experience with a real passion for leading and mentoring development teams.
+        I design architectures that grow with the business, run cloud deployments with <a class="text-info" href="https://kubernetes.io/" target="__blank">Kubernetes</a> on <a class="text-info" href="https://aws.amazon.com/eks/" target="__blank">AWS EKS</a>, integrate with enterprise systems like Oracle NetSuite and automate delivery with CI/CD pipelines.
       </p>
       <p>
         In my free time I like playing the guitar and travelling.
