@@ -1,7 +1,7 @@
 <template>
   <div class="col-sm-4">
     <div class="card text-center">
-      <img class="card-img-top rounded-circle img-thumbnail" width="150" src="../assets/profile.jpg" alt="Leandro Gomez">
+      <img class="card-img-top rounded-circle img-thumbnail" width="150" src="https://www.gravatar.com/avatar/73ef53043e8180a56645194622d849d4fcb41d3e9d9abe3a4230151a12a48d35?s=300" alt="Leandro Gomez">
       <div class="card-body">
         <h5 class="card-title">Leandro Gomez</h5>
         <h6 class="card-subtitle mb-2 text-muted">Staff Software Engineer @ Tiendanube</h6>
